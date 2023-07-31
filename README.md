@@ -3,6 +3,7 @@
 This is a guarded route component that is protected by a certain resource condition. It defines a route that will display different views based on the state of a certain condition.
 
 ## Example
+### Protected page that requires user to be logged in:
 ```rs
 <ResourceProtectedRoute
     path="/"
@@ -23,6 +24,31 @@ This is a guarded route component that is protected by a certain resource condit
             <LoginView />
         }
     )
+/>
+```
+### Login page redirects away when a user is logged in:
+```rs
+<ResourceProtectedRoute 
+                    
+    path="login" 
+    resource_condition=authenticated
+    invert_resource_condition=true
+    redirect_path="/" 
+    protected_view=Box::new(|cx|
+        view! { cx,
+            <LoginView /> 
+        }
+    )
+    fallback_view=Box::new(|cx| 
+        view! { cx, 
+            <LoginView /> 
+        }
+    )
+    resource_err_view=Box::new(|cx| 
+        view! { cx, 
+            <LoginView /> 
+        }
+    )                        
 />
 ```
 
