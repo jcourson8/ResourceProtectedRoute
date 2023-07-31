@@ -3,6 +3,11 @@
 This is a guarded route component that is protected by a certain resource condition. It defines a route that will display different views based on the state of a certain condition.
 
 ## Example
+https://github.com/jcourson8/ResourceProtectedRoute/assets/80439017/b07a8382-bec1-41a9-ab80-53e68c3311ca
+
+
+
+## Example Usage
 ### Protected page that requires user to be logged in:
 ```rs
 <ResourceProtectedRoute
