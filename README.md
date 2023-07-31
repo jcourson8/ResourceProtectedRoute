@@ -52,7 +52,7 @@ This is a guarded route component that is protected by a certain resource condit
 />
 ```
 
-##Required Props
+## Required Props
 **cx:** Scope
 **path:** P
 - The path fragment that this route should match. This can be static (users), include a parameter (:id) or an optional parameter (:id?), or match a wildcard (user/*any).
@@ -71,7 +71,7 @@ The path that will be redirected to if the resource_condition resolves to false.
 **methods:** [&'static [Method]]
 - The HTTP methods that this route can handle (defaults to only GET).
 
-##Optional Props
+## Optional Props
 **ssr:** SsrMode
 - The mode that this route prefers during server-side rendering. Defaults to out-of-order streaming.
 **children:** Children
